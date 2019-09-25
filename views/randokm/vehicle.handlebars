@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html>
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="css/signinup.css">   
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script> window.onLoadCallback = function(){ gapi.auth2.init({ client_id: 'filler_text_for_client_id.apps.googleusercontent.com' }); } </script>
+    <title>Enter vehicle info </title>
+</head>
+    
+    <body>
+    
+    <div class="login-box" style="width:300px; height:900">
+    <img src="avatar.png" class="avatar">
+
+        <h1>Welcome!!</h1>
+            {{#if error}}
+            
+            <p> <em>{{error}}</em> </p>
+            {{/if}}
+            <form method="POST">
+         
+ <input type="text" required name="type" placeholder="Enter fuel">
+        <input type="text" required name="origin" placeholder="Enter src">
+<input type="text" name="destination" placeholder="Enter dest">
+<input type="text" required name="mileage" placeholder="Enter mileage">
+<input type="text" required name="mileage_unit" placeholder="Enter mileage unit">
+
+            <input id="#signin" type="submit" name="submit" value="Calculate">
+            </form>
+        
+    </div>
+        <script src="./javascript/frontsignin.js"></script>
+    </body>
+</html>
+
+
+
